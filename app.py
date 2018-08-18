@@ -49,8 +49,12 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     msg = msg.encode('utf-8')
+    string=''
     if msg=="123":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
+        string='AAA'
+    else:
+        string='BBB'
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=string))
   
  
 
