@@ -49,9 +49,9 @@ def callback():
 def handle_message(event):
     msg = event.message.text
     msg = msg.encode('utf-8')
-    if msg=="你好":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="我不好"))
-    elif msg=="456":
+    if msg=="A":
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
+    elif msg=="B":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="BBB"))
     
  
