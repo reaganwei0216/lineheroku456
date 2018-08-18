@@ -50,8 +50,8 @@ def handle_message(event):
     msg = event.message.text
     # msg = msg.encode('utf-8')
     string=''
-    if msg=="A":
-        string='AAA'
+    if msg=="你好":
+        string='Hi'
     else:
         string='BBB'
     #if msg=="A":
