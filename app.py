@@ -48,12 +48,17 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    msg = msg.encode('utf-8')
+    # msg = msg.encode('utf-8')
+    string=''
     if msg=="A":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
-    elif msg=="B":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="BBB"))
-    
+        string='AAA'
+    else:
+        string='BBB'
+    #if msg=="A":
+    #    line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
+    #elif msg=="B":
+    #    line_bot_api.reply_message(event.reply_token,TextSendMessage(text="BBB"))
+    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=string))
  
 
 if __name__ == '__main__':
