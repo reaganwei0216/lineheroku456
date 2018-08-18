@@ -52,8 +52,10 @@ def handle_message(event):
     string=''
     if msg=="你好":
         string='Hi'
+        line_bot_api.reply_message(event.reply_token,TextSendMessage(text=string))
     else:
-        string='BBB'
+    #    string='BBB'
+    line_bot_api.reply_message(event.reply_token,StickerSendMessage(package_id=1, sticker_id=2))
     #if msg=="A":
     #    line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
     #elif msg=="B":
