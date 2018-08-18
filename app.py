@@ -51,9 +51,7 @@ def handle_message(event):
     msg = msg.encode('utf-8')
     if msg=="123":
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
-    elif msg=="456":
-        line_bot_api.reply_message(event.reply_token,TextSendMessage(text="BBB"))
-    
+  
  
 
 if __name__ == '__main__':
