@@ -48,9 +48,8 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     msg = event.message.text
-    msg = msg.encode('utf-8')
     string=''
-    if msg=="123":
+    if msg=="A":
         string='AAA'
     else:
         string='BBB'
