@@ -54,13 +54,14 @@ def handle_message(event):
         string='Hi'
         line_bot_api.reply_message(event.reply_token,TextSendMessage(text=string))
     else:
+        
     #    string='BBB'
-    line_bot_api.reply_message(event.reply_token,StickerSendMessage(package_id=1, sticker_id=2))
+        line_bot_api.reply_message(event.reply_token,StickerSendMessage(package_id=1, sticker_id=2))
     #if msg=="A":
     #    line_bot_api.reply_message(event.reply_token,TextSendMessage(text="AAA"))
     #elif msg=="B":
     #    line_bot_api.reply_message(event.reply_token,TextSendMessage(text="BBB"))
-    line_bot_api.reply_message(event.reply_token,TextSendMessage(text=string))
+    #line_bot_api.reply_message(event.reply_token,TextSendMessage(text=string))
  
 
 if __name__ == '__main__':
